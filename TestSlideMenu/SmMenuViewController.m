@@ -23,12 +23,35 @@
         firstViewController.view.backgroundColor = [UIColor orangeColor];
         firstViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:self action:@selector(openMenu:)];
         
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        btn.frame = CGRectMake(10, 10, 100, 30);
+        [btn setTitle:@"Open" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(openModal:) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:btn];
+        
         contentController = [[UINavigationController alloc] initWithRootViewController:firstViewController];
         [self addChildViewController: contentController];
         [self.view addSubview: contentController.view];
         
+        
+        
+        
     }
     return self;
+}
+
+-(void)openModal:(id)sender
+{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    UIViewController *vc =[[UIViewController alloc] init];
+    vc.view.frame = CGRectMake(0, 0, 320, 200);
+    vc.view.backgroundColor = [UIColor grayColor];
+    
+    [window.rootViewController presentSemiViewController:vc withOptions:@{
+     KNSemiModalOptionKeys.pushParentBack : @(NO),
+     KNSemiModalOptionKeys.parentAlpha : @(0.8)
+	 }];
 }
 
 -(void)openMenu:(id) sender

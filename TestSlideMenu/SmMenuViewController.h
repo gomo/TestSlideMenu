@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+KNSemiModal.h"
 
 @interface SmMenuViewController : UIViewController
 {

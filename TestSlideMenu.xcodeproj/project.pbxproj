@@ -17,6 +17,8 @@
 		2C9C53111632BA1E007AC810 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C53101632BA1E007AC810 /* Default@2x.png */; };
 		2C9C53131632BA1E007AC810 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C53121632BA1E007AC810 /* Default-568h@2x.png */; };
 		2C9C531B1632BAD0007AC810 /* SmMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C531A1632BAD0007AC810 /* SmMenuViewController.m */; };
+		2C9C5325163327F7007AC810 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C5324163327F7007AC810 /* UIViewController+KNSemiModal.m */; };
+		2C9C532816332929007AC810 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9C532716332929007AC810 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		2C9C53121632BA1E007AC810 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2C9C53191632BAD0007AC810 /* SmMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmMenuViewController.h; sourceTree = "<group>"; };
 		2C9C531A1632BAD0007AC810 /* SmMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmMenuViewController.m; sourceTree = "<group>"; };
+		2C9C5323163327F7007AC810 /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
+		2C9C5324163327F7007AC810 /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
+		2C9C532716332929007AC810 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9C532816332929007AC810 /* QuartzCore.framework in Frameworks */,
 				2C9C52FD1632BA1E007AC810 /* UIKit.framework in Frameworks */,
 				2C9C52FF1632BA1E007AC810 /* Foundation.framework in Frameworks */,
 				2C9C53011632BA1E007AC810 /* CoreGraphics.framework in Frameworks */,
@@ -54,6 +60,8 @@
 		2C9C52ED1632BA1E007AC810 = {
 			isa = PBXGroup;
 			children = (
+				2C9C532716332929007AC810 /* QuartzCore.framework */,
+				2C9C5326163327FF007AC810 /* KNSemiModalView */,
 				2C9C53021632BA1E007AC810 /* TestSlideMenu */,
 				2C9C52FB1632BA1E007AC810 /* Frameworks */,
 				2C9C52F91632BA1E007AC810 /* Products */,
@@ -102,6 +110,24 @@
 				2C9C53121632BA1E007AC810 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C9C5322163327F7007AC810 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2C9C5323163327F7007AC810 /* UIViewController+KNSemiModal.h */,
+				2C9C5324163327F7007AC810 /* UIViewController+KNSemiModal.m */,
+			);
+			name = Source;
+			path = ../KNSemiModalViewController/Source;
+			sourceTree = "<group>";
+		};
+		2C9C5326163327FF007AC810 /* KNSemiModalView */ = {
+			isa = PBXGroup;
+			children = (
+				2C9C5322163327F7007AC810 /* Source */,
+			);
+			name = KNSemiModalView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +199,7 @@
 				2C9C53091632BA1E007AC810 /* main.m in Sources */,
 				2C9C530D1632BA1E007AC810 /* SmAppDelegate.m in Sources */,
 				2C9C531B1632BAD0007AC810 /* SmMenuViewController.m in Sources */,
+				2C9C5325163327F7007AC810 /* UIViewController+KNSemiModal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
