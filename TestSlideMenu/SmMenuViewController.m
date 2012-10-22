@@ -32,10 +32,6 @@
         contentController = [[UINavigationController alloc] initWithRootViewController:firstViewController];
         [self addChildViewController: contentController];
         [self.view addSubview: contentController.view];
-        
-        
-        
-        
     }
     return self;
 }
@@ -50,7 +46,8 @@
     
     [window.rootViewController presentSemiViewController:vc withOptions:@{
      KNSemiModalOptionKeys.pushParentBack : @(NO),
-     KNSemiModalOptionKeys.parentAlpha : @(0.8)
+     KNSemiModalOptionKeys.parentAlpha : @(0.8),
+     KNSemiModalOptionKeys.animationDuration: @(0.2)
 	 }];
 }
 
